@@ -64,10 +64,61 @@ export function aufgabe03 (args) {
 
   export function aufgabe05 (args) {
     const input = args
-    const result = []
+
+    for (let i =0; i < input.length; i++) {
+      const ascii = input[i].charCodeAt (0) 
+         
+      if (65 <= ascii && ascii <= 90) {
+        return true
+        }
+        }
+        return false
+      }
+
+      export function aufgabe06 (args) {
+        const input = args
+
+        for (let i=0;i <input.length; i++) {
+          const ascii = input[i].charCodeAt (0)
+        
+          if (0 <= ascii&&ascii <= 31){
+            return true
+          }else if (33 <= ascii&&ascii <= 64){
+            return true
+            }else if (123<= ascii){
+              return true
+          
+              } else if (91 <= ascii&&ascii <= 96)
+              return true
+              
+              }
+              return false }
+              
+
+        
+              export function aufgabe07(args) {
+                const input = args
+                const result = []
+               
+                for (let i = 0; i < input.length; i++) {
+                  const currentElement = input[i]
+                  const currentElement1 = input[i+1]
+                  const currentElement2 = input[i+2]
+                  if (currentElement === "u" && currentElement1 === "n" && currentElement2 === "d"){
+                   return true
+                  }
+              } 
+                return false
+              }
+
+      export function aufgabe08 (args) {
+        const input = args
+        const result = []
+        
+       
+      }      
     
-    return result.join("")
-  }
+    
 
 export function aufgabe10 (args) {
   const input = args
