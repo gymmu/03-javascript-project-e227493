@@ -111,14 +111,33 @@ export function aufgabe03 (args) {
                 return false
               }
 
-      export function aufgabe08 (args) {
+      export function aufgabe08(args) {
+        const input = args
+        const result = []
+      
+        for (let i = 0; i < input.length; i++) {
+          const currentElement = input[i]
+          if (currentElement === "e") {
+           result.push("3")
+          }
+        
+         else {
+          result.push(currentElement)
+         } 
+        }
+        return result.join("")
+      }
+    
+      export function aufgabe09 (args) {
         const input = args
         const result = []
         
-       
-      }      
-    
-    
+        if (input.length === 6) {
+        return true 
+      }
+      else 
+      return false
+    }
 
 export function aufgabe10 (args) {
   const input = args
@@ -142,3 +161,31 @@ export function aufgabe10 (args) {
 
   return true
 }
+
+export function aufgabe11 (args) {
+  const input = args
+
+  for (let i =0; i < input.length; i++) {
+    const currentElement = input [i]
+    const ascii = currentElement.charCodeAt (0)                                                                                                                                                                                                           
+
+    if (input.length === 1) {
+      return ascii
+    }
+      
+     
+  } }
+
+ 
+  export function aufgabe12(args) {
+    const input = args;
+    const position = input.indexOf("e");
+    return position;
+  }
+
+  export function aufgabe13 (args) {
+    const input = args
+    const result = []
+    
+    return result.join("")
+  }
