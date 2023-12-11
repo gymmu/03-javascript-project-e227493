@@ -75,24 +75,24 @@ export function aufgabe03 (args) { // "e" zählen
         return false //false wird gegeben, falls es kein Grossbuchstabe findet
       }
 
-      export function aufgabe06 (args) {
+      export function aufgabe06 (args) { //Überprüft ob ein Sonderzeichen vorhanden ist
         const input = args
 
         for (let i=0;i <input.length; i++) {
           const ascii = input[i].charCodeAt (0)
         
-          if (0 <= ascii&&ascii <= 31){
+          if (0 <= ascii&&ascii <= 31){ // ASCII Werte zwischen 0 und 31 sind Sonderzeichen
             return true
-          }else if (33 <= ascii&&ascii <= 64){
+          }else if (33 <= ascii&&ascii <= 64){ // ASCII Werte zwischen 33 und 64 sind Sonderzeichen
             return true
-            }else if (123<= ascii){
+            }else if (123<= ascii){ // ASCII Werte ab 123  sind Sonderzeichen
               return true
           
-              } else if (91 <= ascii&&ascii <= 96)
+              } else if (91 <= ascii&&ascii <= 96) // ASCII Werte zwischen 91 und 96 sind Sonderzeichen
               return true
               
               }
-              return false }
+              return false } //Wenn kein Sonderzeichen vorhanden ist, wird false gegeben
               
 
         
@@ -111,14 +111,14 @@ export function aufgabe03 (args) { // "e" zählen
                 return false
               }
 
-      export function aufgabe08(args) {
+      export function aufgabe08(args) { // Alle "e" durch 3 ersetzen
         const input = args
         const result = []
       
         for (let i = 0; i < input.length; i++) {
           const currentElement = input[i]
-          if (currentElement === "e") {
-           result.push("3")
+          if (currentElement === "e") { // Wenn das Element "e" ist 
+           result.push("3") // wird es durch 3 ersetzt
           }
         
          else {
@@ -128,15 +128,15 @@ export function aufgabe03 (args) { // "e" zählen
         return result.join("")
       }
     
-      export function aufgabe09 (args) {
+      export function aufgabe09 (args) { // Überprüft ob die Eingabe 6 Zeichen lang ist
         const input = args
         const result = []
         
-        if (input.length === 6) {
-        return true 
+        if (input.length === 6) { // Überprüft ob die Eingabe 6 Zeichen lang ist
+        return true // gibt true wenn es 6 Zeichen lang ist
       }
       else 
-      return false
+      return false // gibt false wenn es nicht stimmt
     }
 
 export function aufgabe10 (args) {
@@ -162,21 +162,21 @@ export function aufgabe10 (args) {
   return true
 }
 
-export function aufgabe11 (args) {
+export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   const input = args
 
   for (let i =0; i < input.length; i++) {
     const currentElement = input [i]
     const ascii = currentElement.charCodeAt (0)                                                                                                                                                                                                           
 
-    if (input.length === 1) {
-      return ascii
+    if (input.length === 1) { //Überprüft ob die Eingabe nur 1 Zeichen lang ist
+      return ascii //gibt den ASCII-Wert an
     }
       
      
   } }
 
-  export function aufgabe12 (args) {
+  export function aufgabe12 (args) { //sucht Position des ersten "e"
     const input = args
     const result = []
     
@@ -185,32 +185,32 @@ export function aufgabe11 (args) {
      
       const currentElement = input[i]
       
-      if (currentElement === "e"){
-        return i
+      if (currentElement === "e"){ // Wenn das Element "e" ist
+        return i // gibt den Index
       }
     }
-    return -1
+    return -1 //gibt -1 wenn kein "e" gefunden wurde
   }
 
   
 
-  export function aufgabe13 (args) {
+  export function aufgabe13 (args) { //sucht Position des letzten "e"
     const input = args
     const result = []
     
     
     for (let i = input.length; i > 1; i--) {
      
-      const currentElement = input[i]
+      const currentElement = input[i] 
       
-      if (currentElement === "e"){
-        return i
+      if (currentElement === "e"){ // Wenn das Element "e" ist
+        return i // gibt den Index
       }
     }
-    return -1
+    return -1 //gibt -1 wenn kein "e" gefunden wurde
   }
 
-  export function aufgabe14 (args) {
+  export function aufgabe14 (args) { //sucht Position des dritten "e"
     const input = args
     const result = []
     let Zahl = 0
@@ -220,14 +220,14 @@ export function aufgabe11 (args) {
      
       const currentElement = input[i]
       
-      if (currentElement === "e"){
-        Zahl++
-      if (Zahl === 3){
-        return i
+      if (currentElement === "e"){  // Wenn das Element "e" ist
+        Zahl++ //wird die Zahl um 1 erhöht
+      if (Zahl === 3){ //wenn die Zahl 3 erreicht ist
+        return i //gibt den Index
       }
     }
     }
-    return -1
+    return -1 //gibt -1 wenn kein "e" gefunden wurde
   }
 
   export function aufgabe15(args) {
