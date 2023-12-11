@@ -176,16 +176,21 @@ export function aufgabe11 (args) {
      
   } }
 
- 
-  export function aufgabe12(args) {
-    const input = args;
-    const position = input.indexOf("e");
-    return position;
-  }
-
-  export function aufgabe13 (args) {
+  export function aufgabe12 (args) {
     const input = args
     const result = []
     
-    return result.join("")
+    
+    for (let i = 0; i < input.length; i++) {
+     
+      const currentElement = input[i]
+      
+      if (currentElement === "e"){
+        return i
+      }
+    }
+    return -1
   }
+
+  
+
