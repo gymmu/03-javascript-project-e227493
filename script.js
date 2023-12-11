@@ -1,4 +1,4 @@
-export function aufgabe01(args) {
+export function aufgabe01(args)  { //alle "e" entfernen
   const input = args
   const result = []
 
@@ -17,12 +17,12 @@ export function aufgabe01(args) {
   return result.join("")
 }
 
-export function aufgabe02 (args) {
+export function aufgabe02 (args) { // Alles in Grossbuchstaben
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
     let currentElement = input[i]
-    currentElement = currentElement.toUpperCase()
+    currentElement = currentElement.toUpperCase() //Der Text wird in Grossbuchstaben geschrieben
     result.push(currentElement)
   
   }
@@ -30,49 +30,49 @@ export function aufgabe02 (args) {
   return result.join("")
 }
 
-export function aufgabe03 (args) {
+export function aufgabe03 (args) { // "e" zählen
   const input = args
   const result = []
   let count = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input [i]
-    if (currentElement === "e") {
+    if (currentElement === "e") { //wenn das aktuelle Element "e" ist, wird Zähler um 1 erhöht
       count++
     }
-    else if (currentElement === "E") {
+    else if (currentElement === "E") { //wenn das aktuelle Element "E" ist, wird Zähler um 1 erhöht
       count++
     }
   }
   
-  return count
+  return count //Anzahl "e" wird gegeben
 
   }
 
-  export function aufgabe04 (args) {
+  export function aufgabe04 (args) { // Wörte werden gezählt
     const input = args
     const result = []
     let count = 1
     for (let i = 0; i < input.length; i++) {
       const currentElement = input [i]
-      if (currentElement === " ") {
+      if (currentElement === " ") { //wenn das aktuelle Element ein Leerzeichen ist, wird Zähler um 1 erhöht
         count++
       }
 }
-    return count
+    return count //Anzahl Wörter wird gegeben
   }
 
-  export function aufgabe05 (args) {
+  export function aufgabe05 (args) { // überprüft ob ein Grossbuchstabe vorhanden ist
     const input = args
 
     for (let i =0; i < input.length; i++) {
-      const ascii = input[i].charCodeAt (0) 
+      const ascii = input[i].charCodeAt (0) //Der ASCII-Wert des Elementes wird gegeben
          
-      if (65 <= ascii && ascii <= 90) {
-        return true
+      if (65 <= ascii && ascii <= 90) { // wenn der ASCII Wert zwischen 65- 90 (Grossbuchstaben A-Z) ist
+        return true // true wird gegeben
         }
         }
-        return false
+        return false //false wird gegeben, falls es kein Grossbuchstabe findet
       }
 
       export function aufgabe06 (args) {
@@ -258,7 +258,7 @@ export function aufgabe11 (args) {
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      
+
       result.push(currentElement)
       result.push(currentElement)
     }
