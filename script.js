@@ -229,3 +229,54 @@ export function aufgabe11 (args) {
     }
     return -1
   }
+
+  export function aufgabe15(args) {
+    const input = args
+    const result = []
+  
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === " ") {   
+        return result.join("") 
+      }
+      
+      result.push(currentElement) 
+   
+    }
+    return result.join("")   
+   }
+  
+
+
+
+
+
+
+   export function aufgabe19 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      
+      result.push(currentElement)
+      result.push(currentElement)
+    }
+    return result.join("")
+  }
+
+  export function aufgabe20 (args) {
+    const input = args
+    const result = []
+    
+    for (let i = 0; i < input.length; i++) 
+    {
+      const currentElement = input[i]
+      const currentElement1 = input[i+1]
+      if (currentElement === "." && currentElement1 !== " ")
+    {
+      return false
+    }
+  }
+    return true
+  }
