@@ -194,3 +194,38 @@ export function aufgabe11 (args) {
 
   
 
+  export function aufgabe13 (args) {
+    const input = args
+    const result = []
+    
+    
+    for (let i = input.length; i > 1; i--) {
+     
+      const currentElement = input[i]
+      
+      if (currentElement === "e"){
+        return i
+      }
+    }
+    return -1
+  }
+
+  export function aufgabe14 (args) {
+    const input = args
+    const result = []
+    let Zahl = 0
+    
+    
+    for (let i = 0; i < input.length; i++) {
+     
+      const currentElement = input[i]
+      
+      if (currentElement === "e"){
+        Zahl++
+      if (Zahl === 3){
+        return i
+      }
+    }
+    }
+    return -1
+  }
