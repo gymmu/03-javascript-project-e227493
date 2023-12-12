@@ -49,7 +49,7 @@ export function aufgabe03 (args) { // "e" zählen
 
   }
 
-  export function aufgabe04 (args) { // Wörte werden gezählt
+  export function aufgabe04 (args) { // Wörter werden gezählt
     const input = args
     const result = []
     let count = 1
@@ -246,12 +246,31 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     return result.join("")   
    }
   
+   export function aufgabe16 (args) {
+    const input = args
+    const result = []
+    let count$ = 0
 
-
-
-
-
-
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    if (count$ === 0 && currentElement === "$" && i+2 > input.length) {
+    result.push("")
+    count$++
+    }
+    else if (currentElement === "$" && count$ === 0) {
+    result.push(",")
+    count$++
+    }
+    else {
+      result.push(currentElement)
+    }
+   
+  }
+  
+  return result.join("")
+  }
+  
+  
    export function aufgabe19 (args) {
     const input = args
     const result = []
@@ -279,4 +298,23 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     }
   }
     return true
+  }
+
+  export function aufgabe24 (args) {
+    const input = args
+    const result = []
+
+    if (input.length === 1) return input
+
+const firstElement = input[0]
+const lastElement = input[input.length - 1]
+
+result.push(lastElement)
+    for (let i = 1; i < input.length - 1; i++) {
+      const currentElement = input[i]
+result.push(currentElement)
+
+    }
+    result.push(firstElement)
+    return result.join("")
   }
