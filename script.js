@@ -267,6 +267,7 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
    
   }
   
+  
   return result.join("") //das gesamte Array wird gegeben
   }
   
@@ -301,7 +302,7 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   }
     return true //gibt true
   }
-  
+
   export function aufgabe21 (args) { // Die Eingabe wird umgedreht
     const input = args
     const result = []
@@ -331,4 +332,22 @@ result.push(currentElement)
     }
     result.push(firstElement)
     return result.join("")
+  }
+
+  export function bubbleSort (args) {
+    const text = args
+  const list = text.split("") 
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 
+    }
+  }
+  const result = list.join("")
+  return result
   }
