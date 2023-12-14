@@ -267,10 +267,8 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
    
   }
   
-  
   return result.join("") //das gesamte Array wird gegeben
   }
-  
   
    export function aufgabe19 (args) { //jedes Zeichen verdoppeln
     const input = args
@@ -334,6 +332,25 @@ result.push(currentElement)
     return result.join("")
   }
 
+  export function aufgabe26 (args) {
+    const input = args
+    const list = input.split("")
+  
+    for (let i = 0; i < list.length - 1; i++) {
+      const currentElement = list[i]
+      const currentElement1 = list[i + 1]
+      if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) {
+        const tmp = list[i + 1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = -1
+   
+      }
+    }
+    const result = list.join("")
+    return result
+  }
+  
   export function bubbleSort (args) {
     const text = args
   const list = text.split("") 
