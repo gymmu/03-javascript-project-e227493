@@ -246,28 +246,28 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     return result.join("")   
    }
   
-   export function aufgabe16 (args) {
+   export function aufgabe16 (args) { //die Eingabe bis zum Zeichen '$' als ersten Teil einer Liste ein, und den Rest als den zweiten Teil.
     const input = args
     const result = []
     let count$ = 0
 
-    for (let i = 0; i < input.length; i++) {
+    for (let i = 0; i < input.length; i++) { 
       const currentElement = input[i]
-    if (count$ === 0 && currentElement === "$" && i+2 > input.length) {
+    if (count$ === 0 && currentElement === "$" && i+2 > input.length) {// Überprüft, ob count$ gleich 0 ist, currentElement ein "$" ist und i+2 größer als die Länge des input Arrays ist
     result.push("")
-    count$++
+    count$++ // Erhöht Zähler um 1
     }
-    else if (currentElement === "$" && count$ === 0) {
-    result.push(",")
-    count$++
+    else if (currentElement === "$" && count$ === 0) { //wenn das Element ein "$" ist und count$ gleich 0 ist
+    result.push(",") // wird ein Komma eingefügt
+    count$++ // erhöht den Zähler um 1
     }
     else {
-      result.push(currentElement)
+      result.push(currentElement) // das aktuelle Element wird eingefügt
     }
    
   }
   
-  return result.join("")
+  return result.join("") //das gesamte Array wird gegeben
   }
   
   
