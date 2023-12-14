@@ -284,20 +284,20 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     return result.join("") //das gesamte Array wird gegeben
   }
 
-  export function aufgabe20 (args) {
+  export function aufgabe20 (args) { //Prüft ob nach "." ein Leerzeichen kommt
     const input = args
     const result = []
     
     for (let i = 0; i < input.length; i++) 
     {
-      const currentElement = input[i]
-      const currentElement1 = input[i+1]
-      if (currentElement === "." && currentElement1 !== " ")
+      const currentElement = input[i] //das aktuelle Element wird eingegeben
+      const currentElement1 = input[i+1] //das Element nach dem aktuellen Element wird eingegeben
+      if (currentElement === "." && currentElement1 !== " ") //Überprüft, ob das aktuelle Element ein "." ist und das Element nach dem aktuellen Element kein Leerzeichen ist
     {
-      return false
+      return false //gibt false, wenn Bedingung erfüllt ist
     }
   }
-    return true
+    return true //gibt true
   }
 
   export function aufgabe24 (args) {
