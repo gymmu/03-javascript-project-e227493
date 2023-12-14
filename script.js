@@ -271,17 +271,17 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   }
   
   
-   export function aufgabe19 (args) {
+   export function aufgabe19 (args) { //jedes Zeichen verdoppeln
     const input = args
     const result = []
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
 
-      result.push(currentElement)
-      result.push(currentElement)
+      result.push(currentElement) //das aktuelle Element wird eingefügt
+      result.push(currentElement) //das aktuelle Element wird wieder dem Array hinzugefügt
     }
-    return result.join("")
+    return result.join("") //das gesamte Array wird gegeben
   }
 
   export function aufgabe20 (args) {
