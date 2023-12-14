@@ -332,7 +332,7 @@ result.push(currentElement)
     return result.join("")
   }
 
-  export function aufgabe26 (args) {
+  export function aufgabe26 (args) { //Die ersten zwei Zeichen werden vertauscht
     const input = args
     const list = input.split("")
   
@@ -340,15 +340,15 @@ result.push(currentElement)
       
       const currentElement = list[i]
       const currentElement1 = list[i + 1]
-      if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) {
-        const tmp = list[i + 1]
+      if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) { //Wenn das aktuelle Element grösser als das Element nach dem aktuellen Element ist
+        const tmp = list[i + 1]//Die beiden Elemente werden vertauscht
         list[i+1] = list[i]
         list[i] = tmp
         i = -1
       
       }
     }
-    const result = list.join("")
+    const result = list.join("") //wird in einen String umgewandelt
     return result
   }
   
@@ -358,14 +358,14 @@ result.push(currentElement)
   for (let i = 0; i < list.length - 1; i++) {
     const currentElement = list[i]
     const nextElement = list[i + 1]
-    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { //Wenn das aktuelle Element grösser als das Element nach dem aktuellen Element ist
       
-      const tmp = list[i + 1]
+      const tmp = list[i + 1] //Die beiden Elemente werden vertauscht
       list[i + 1] = list[i]
       list[i] = tmp
       i = -1 
     }
   }
-  const result = list.join("")
+  const result = list.join("") //wird in einen String umgewandelt
   return result
   }
