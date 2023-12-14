@@ -284,18 +284,7 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     return result.join("") //das gesamte Array wird gegeben
   }
 
-  export function aufgabe21 (args) {
-    const input = args
-    const result = []
   
-    for (let i = input.length; i > -1; i--) {
-
-      const currentElement = input[i]
-      result.push(currentElement)
-    }
-    
-    return result.join("")
-  }
 
   export function aufgabe20 (args) { //Prüft ob nach "." ein Leerzeichen kommt
     const input = args
@@ -312,7 +301,19 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   }
     return true //gibt true
   }
+  
+  export function aufgabe21 (args) { // Die Eingabe wird umgedreht
+    const input = args
+    const result = []
+  
+    for (let i = input.length; i > -1; i--) { //Eine Schleife, die rückwärts überprüft 
 
+      const currentElement = input[i] //das aktuelle Element wird eingegeben
+      result.push(currentElement)
+    }
+    
+    return result.join("") //das gesamte Array (Ergebnis) wird gegeben
+  }
   export function aufgabe24 (args) {
     const input = args
     const result = []
