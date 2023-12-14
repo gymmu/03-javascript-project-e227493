@@ -333,14 +333,24 @@ result.push(currentElement)
   }
 
   export function aufgabe26 (args) {
-    let input = args
-    const result = []
-    let splitInput = input.split("")
-    
-    let sortedInput = splitInput.sort()
-    input = sortedInput.join("")
-    return input
-  }  
+    const input = args
+    const list = input.split("")
+  
+    for (let i = 0; i < list.length - 1; i++) {
+      
+      const currentElement = list[i]
+      const currentElement1 = list[i + 1]
+      if (currentElement.charCodeAt(0) > currentElement1.charCodeAt(0)) {
+        const tmp = list[i + 1]
+        list[i+1] = list[i]
+        list[i] = tmp
+        i = -1
+      
+      }
+    }
+    const result = list.join("")
+    return result
+  }
   
   export function bubbleSort (args) {
     const text = args
