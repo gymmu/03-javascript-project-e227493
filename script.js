@@ -356,7 +356,6 @@ result.push(currentElement)
     const text = args
   const list = text.split("") 
   for (let i = 0; i < list.length - 1; i++) {
-    const currentElement = list[i]
     const nextElement = list[i + 1]
     if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { //Wenn das aktuelle Element grösser als das Element nach dem aktuellen Element ist
       
