@@ -313,23 +313,24 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     
     return result.join("") //das gesamte Array (Ergebnis) wird gegeben
   }
-  export function aufgabe24 (args) {
+  export function aufgabe24 (args) { //Das erste und letzte Zeichen werden vertauscht
     const input = args
     const result = []
 
-    if (input.length === 1) return input
+    if (input.length === 1) return input //wenn es nur ein Element gibt, wird das Element gegeben
 
-const firstElement = input[0]
+const firstElement = input[0] //Das erste und das letzte Element werdne gespeichert
 const lastElement = input[input.length - 1]
 
-result.push(lastElement)
-    for (let i = 1; i < input.length - 1; i++) {
+result.push(lastElement) //Das letzte Element wird dem Array hinzugefügt
+
+    for (let i = 1; i < input.length - 1; i++) { //Alle Elemente zwischen dem ersten und dem letzten Element werden eingegeben
       const currentElement = input[i]
 result.push(currentElement)
 
     }
-    result.push(firstElement)
-    return result.join("")
+    result.push(firstElement) //Das erste Element wird dem Array hinzugefügt
+    return result.join("") //das gesamte Array wird gegeben
   }
 
   export function aufgabe26 (args) { //Die ersten zwei Zeichen werden vertauscht
@@ -356,6 +357,7 @@ result.push(currentElement)
     const text = args
   const list = text.split("") 
   for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
     const nextElement = list[i + 1]
     if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) { //Wenn das aktuelle Element grösser als das Element nach dem aktuellen Element ist
       
