@@ -394,6 +394,25 @@ result.push(currentElement)
     const result = list.join("") //wird in einen String umgewandelt
     return result
   }
+
+  export function aufgabe27 (args) {
+    const input = args
+    const result = []
+  
+    if (input.length === 0) {
+      return false
+    }
+  
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) {
+      }
+      else {
+        return false
+      }
+    }
+    return true
+  }
   
   export function bubbleSort (args) {
     const text = args
