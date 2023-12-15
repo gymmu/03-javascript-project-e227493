@@ -313,6 +313,29 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     
     return result.join("") //das gesamte Array (Ergebnis) wird gegeben
   }
+  export function aufgabe22 (args) {
+    const input = args
+    const result = []
+    let count = 0
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (count === 1) {
+        result.push(currentElement)
+       
+      } 
+      else if (currentElement === "k") {
+        count++
+        result.push(currentElement)
+}
+      else {
+        result.push("_")
+      
+      }
+  
+    }
+    return result.join("")
+  }
   export function aufgabe24 (args) { //Das erste und letzte Zeichen werden vertauscht
     const input = args
     const result = []
