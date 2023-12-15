@@ -395,7 +395,7 @@ result.push(currentElement)
     return result
   }
 
-  export function aufgabe27 (args) {
+  export function aufgabe27 (args) { // testet ob Eingabe eine Zahl ist
     const input = args
     const result = []
   
@@ -405,9 +405,9 @@ result.push(currentElement)
   
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) {
+      if (currentElement.charCodeAt(0) >= 48 && currentElement.charCodeAt(0) <= 57) { //wenn  Element eine Zahl ist
       }
-      else {
+      else { //wenn Element keine Zahl ist
         return false
       }
     }
