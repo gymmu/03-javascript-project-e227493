@@ -269,7 +269,33 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   
   return result.join("") //das gesamte Array wird gegeben
   }
-  
+
+  export function aufgabe17 (args) {
+    const input = args
+    const result = []
+    let countDot = 0
+    let listEins = []
+    let listZwei = []
+    let listDrei = []
+    
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+      if (currentElement === ".") {
+        countDot++
+      }
+      else if(countDot === 0) {
+        listEins.push(currentElement)
+      }
+      else if(countDot === 1) {
+        listZwei.push(currentElement)
+      }
+      else if(countDot === 2) {
+        listDrei.push(currentElement)
+      }
+        
+    }
+    return listEins.join("") + listZwei.join("") + listDrei.join("")
+  }
    export function aufgabe19 (args) { //jedes Zeichen verdoppeln
     const input = args
     const result = []
