@@ -313,18 +313,18 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     
     return result.join("") //das gesamte Array (Ergebnis) wird gegeben
   }
-  export function aufgabe22 (args) {
+  export function aufgabe22 (args) { // alle Zeichen aus der Eingabe mit "_" ersetzt werden ausser erstes "k"
     const input = args
     const result = []
     let count = 0
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
-      if (count === 1) {
+      if (count === 1) { //wenn count 1 ist, wurde erstes "k" gefunden
         result.push(currentElement)
        
       } 
-      else if (currentElement === "k") {
+      else if (currentElement === "k") { //wenn aktuelles Element "k" ist wird count um 1 erhöht
         count++
         result.push(currentElement)
 }
@@ -332,6 +332,7 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
         result.push("_")
       
       }
+      
   
     }
     return result.join("")
