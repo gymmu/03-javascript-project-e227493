@@ -270,27 +270,27 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
   return result.join("") //das gesamte Array wird gegeben
   }
 
-  export function aufgabe17 (args) {
+  export function aufgabe17 (args) { //Eingabe als Liste einlesen. Einträge mit "," trennen
     const input = args
     const result = []
-    let countDot = 0
-    let listEins = []
-    let listZwei = []
-    let listDrei = []
+    let countDot = 0 //countDot (Variable um Anzahl Punkte zu zählen) ist null
+    let listEins = [] //liste eins wird erstellt
+    let listZwei = [] //liste zwei wird erstellt
+    let listDrei = [] //liste drei wird erstellt
     
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
       if (currentElement === ".") {
-        countDot++
+        countDot++ //wenn das aktuelle Element ein Punkt ist wird countDot um 1 erhöht
       }
       else if(countDot === 0) {
-        listEins.push(currentElement)
+        listEins.push(currentElement) //wenn countDot 0 ist wird das aktuelle Element in listEins eingefügt
       }
       else if(countDot === 1) {
-        listZwei.push(currentElement)
+        listZwei.push(currentElement) //wenn  1 ist wird das aktuelle Element in listZwei eingefügt
       }
       else if(countDot === 2) {
-        listDrei.push(currentElement)
+        listDrei.push(currentElement) //wenn  2 ist wird das aktuelle Element in listDrei eingefügt
       }
         
     }
