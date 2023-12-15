@@ -337,6 +337,24 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     }
     return result.join("")
   }
+
+  export function aufgabe23 (args) { 
+    const input = args
+    const result = []
+    const firstElement = input[0]
+  
+    result.push(firstElement) 
+
+    for (let i = 0; i < input.length; i++) {
+      const currentElement = input[i]
+    
+      result.push(currentElement) 
+    }
+    result.push(firstElement) 
+    
+    return result.join("")
+  }
+  
   export function aufgabe24 (args) { //Das erste und letzte Zeichen werden vertauscht
     const input = args
     const result = []
