@@ -338,19 +338,19 @@ export function aufgabe11 (args) { //Gibt den ASCII-Wert an
     return result.join("")
   }
 
-  export function aufgabe23 (args) { 
+  export function aufgabe23 (args) { //das erste Zeicen ganz vorne und hinten hinzufügen
     const input = args
     const result = []
     const firstElement = input[0]
   
-    result.push(firstElement) 
+    result.push(firstElement) // firstElement wird dem ergebnis hinzugefügt
 
     for (let i = 0; i < input.length; i++) {
       const currentElement = input[i]
     
       result.push(currentElement) 
     }
-    result.push(firstElement) 
+    result.push(firstElement) //fügt fistelement am Ende des Ergebnis hinzu
     
     return result.join("")
   }
